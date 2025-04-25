@@ -1,0 +1,35 @@
+---
+export const getStaticPaths = async () => {
+  return Array.from({ length: 1000 }, (_, i) => ({
+    params: { id: (i + 1).toString() },
+    props: { pageNumber: i + 1 }
+  }));
+};
+
+const { pageNumber } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Template 2 - {pageNumber}</title>
+  <style>
+    /* Cole aqui o CSS da página https://glucosecontrolguide.com/fb/sgs/vsl3/prn-ca1/h1l1// */
+    /* ... seus estilos ... */
+  </style>
+</head>
+<body>
+  <main>
+    {/* Cole aqui o HTML da página https://glucosecontrolguide.com/fb/sgs/vsl3/prn-ca1/h1l1// */}
+    <h1>Conteúdo da Página Template 2 - Número: {pageNumber}</h1>
+    <div class="header">
+      {/* ... elementos do header ... */}
+    </div>
+    <div class="body-text">
+      {/* ... restante do conteúdo ... */}
+    </div>
+  </main>
+</body>
+</html>

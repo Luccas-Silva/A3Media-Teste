@@ -10,11 +10,15 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.2.5",
+    "@tinacms/cli": "^1.9.5",
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "astro": "^5.7.5",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "tinacms": "^2.7.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2"
   }
 }
