@@ -8,8 +8,8 @@ const branch =
 
 export default defineConfig({
   branch,
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
-  token: process.env.TINA_TOKEN,
+  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // Remova se não estiver usando o modo remoto
+  token: process.env.TINA_TOKEN, // Remova se não estiver usando o modo remoto
   build: {
     outputFolder: "admin",
     publicFolder: "public",
@@ -25,57 +25,57 @@ export default defineConfig({
       {
         name: "paginatemplate1",
         label: "Página Template 1",
-        path: "src/pages/paginatemplate1", // O caminho para a pasta do seu template 1
-        format: "astro", // Indica que estamos gerenciando arquivos .astro diretamente (experimental) ou mdx
+        path: "src/pages/paginatemplate1",
+        format: "mdx", // Ou "astro" se não quiser usar MDX
         match: {
-          include: "[id].astro", // Para corresponder aos seus arquivos de rota dinâmica
+          include: "[id].mdx", // Ou "[id].astro"
         },
         fields: [
           {
             type: "string",
             name: "title",
             label: "Título",
+            isTitle: true,
           },
           {
             type: "number",
             name: "pageNumber",
             label: "Número da Página",
-            isTitle: true,
           },
           {
             type: "rich-text",
             name: "body",
             label: "Conteúdo",
           },
-          // Adicione outros campos conforme a estrutura do seu Template 1
+          // Adicione outros campos que você queira gerenciar
         ],
       },
       {
         name: "paginatemplate2",
         label: "Página Template 2",
-        path: "src/pages/paginatemplate2", // O caminho para a pasta do seu template 2
-        format: "astro", // Indica que estamos gerenciando arquivos .astro diretamente (experimental) ou mdx
+        path: "src/pages/paginatemplate2",
+        format: "mdx", // Ou "astro"
         match: {
-          include: "[id].astro", // Para corresponder aos seus arquivos de rota dinâmica
+          include: "[id].mdx", // Ou "[id].astro"
         },
         fields: [
           {
             type: "string",
             name: "title",
             label: "Título",
+            isTitle: true,
           },
           {
             type: "number",
             name: "pageNumber",
             label: "Número da Página",
-            isTitle: true,
           },
           {
             type: "rich-text",
             name: "body",
             label: "Conteúdo",
           },
-          // Adicione outros campos conforme a estrutura do seu Template 2
+          // Adicione outros campos
         ],
       },
     ],
