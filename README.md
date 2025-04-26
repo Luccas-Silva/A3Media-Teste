@@ -3,9 +3,9 @@ Este repositório contém a solução para o teste prático da A3 Media para a v
 
 ## 📋 Descrição do Desafio
 ### O teste consiste em:
-1. Copiar duas páginas de concorrentes** com perfeição visual e estrutural.
-2. Transformá-las em templates** utilizando o framework [Astro](https://astro.build/).
-3. Gerar 1000 cópias de cada página template**, utilizando [TinaCMS](https://tina.io/) para gerenciar o conteúdo.
+1. Copiar duas páginas de concorrentes com perfeição visual e estrutural.
+2. Transformá-las em templates utilizando o framework [Astro](https://astro.build/).
+3. Gerar 1000 cópias de cada página template, utilizando [TinaCMS](https://tina.io/) para gerenciar o conteúdo.
 4. Cada cópia deve ter uma slug seguindo o formato: `https://dominioexemplo.com/paginatemplate[1 ou 2]/{número da página de 1...1000}`
 
 ## 🛠️ Stack Utilizada
