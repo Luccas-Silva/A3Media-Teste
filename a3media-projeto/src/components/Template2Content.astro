@@ -2,32 +2,141 @@
 const { pageNumber } = Astro.props;
 ---
 
-<div>
-  <h1>Conteúdo da Página Template 2 - Número: {pageNumber}</h1>
-  {/* Cole AQUI o HTML COPIADO da página https://glucosecontrolguide.com/fb/sgs/vsl3/prn-ca1/h1l1// */}
-  <div class="header">
-    {/* Exemplo de uma parte do HTML */}
-    <p>Este é o cabeçalho da página.</p>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diabetic Parasite Warning - Página {pageNumber}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      text-align: center;
+    }
+
+    .container {
+      padding: 2rem;
+    }
+
+    .headline {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-thumbnail {
+      max-width: 80%; 
+      height: auto;
+      margin-bottom: 2rem;
+    }
+
+    .references-title {
+      margin-top: 3rem;
+      font-size: 1.2rem;
+      color: #555;
+    }
+
+    .logos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 2rem 0;
+    }
+
+    .logos img {
+      max-width: 80%;
+      margin: 1rem;
+    }
+
+    .study-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      font-size: 1rem;
+      color: #555;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+
+    .study-list ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: gray;
+      margin-top: 3rem;
+      padding: 2rem;
+      background: #222;
+      color: #ccc;
+    }
+
+    .footer-links {
+      margin-top: 1rem;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="headline">
+      <h1>This "Diabetic Parasite" is causing deadly glucose spikes in millions of Americans! (See the #1 way to fight it now)</h1>
+    </div>
+
+    <img src="https://images.converteai.net/878e8e96-9e3c-48f1-96d9-9d726cef585a/players/67864fb06e451dbbada28cc2/cover.jpg" alt="Diabetic Parasite Video" class="video-thumbnail" />
+
+    <div class="references-title">Scientific References:</div>
+
+    <div class="logos">
+      <img src="/natural_recipe_assets/images/refs.webp" alt="logos" />
+    </div>
+
+    <div class="study-list">
+      <ul>
+        <li>Vitamin D and type 2 diabetes</li>
+        <li>Vitamin D and Diabetic Kidney Disease</li>
+        <li>Vitamin D and beta cells in children</li>
+        <li>... (adicione mais se quiser)</li>
+      </ul>
+      <ul>
+        <li>Vitamin D and beta cells in type 1 diabetes</li>
+        <li>Vitamin D and glucose insights</li>
+        <li>Vitamin D and risk of type 2 diabetes</li>
+        <li>... (adicione mais se quiser)</li>
+      </ul>
+    </div>
+
+    <footer>
+      <div class="footer-links">
+        <a href="#">Privacy</a> |
+        <a href="#">Terms and Conditions</a> |
+        <a href="#">Disclaimer</a> |
+        <a href="#">References</a> |
+        <a href="#">Returns</a> |
+        <a href="#">Refunds</a> |
+        <a href="#">Contact</a> |
+        <a href="#">Shipping Policy</a>
+      </div>
+
+      <p>All rights reserved.</p>
+
+      <p>These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure or prevent any disease.</p>
+
+      <p>The content of this site is for informational purposes only, and is not intended to replace professional medical advice, diagnosis or treatment.</p>
+    </footer>
   </div>
-  <div class="body-text">
-    {/* Exemplo de outra parte do HTML */}
-    <p>Este é o corpo do texto da página.</p>
-  </div>
-  {/* Continue colando o restante do HTML aqui */}
-</div>
-
-<style>
-  /* Cole AQUI o CSS COPIADO da página https://glucosecontrolguide.com/fb/sgs/vsl3/prn-ca1/h1l1// */
-  .header {
-    /* Exemplo de estilos */
-    background-color: #f0f0f0;
-    padding: 10px;
-  }
-
-  .body-text {
-    /* Exemplo de estilos */
-    line-height: 1.5;
-  }
-
-  /* Continue colando o restante do CSS aqui */
-</style>
+</body>
+</html>

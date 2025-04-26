@@ -1,16 +1,92 @@
 ---
-
+const nome = "Luccas Silva";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{nome} | Teste A3 Media</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #f0f0f0;
+        padding: 5vh 5vw;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 5vh;
+      }
+
+      h1 {
+        font-size: 6vw;
+        max-font-size: 60px;
+        font-weight: bold;
+		margin-top: 5vh;
+      }
+
+      .btn-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        width: 80%;
+        max-width: 400px;
+      }
+
+      .btn {
+        font-size: 5vw;
+        padding: 5vh 0;
+        background-color: #4f46e5;
+        color: #fff;
+        border: none;
+        border-radius: 1vw;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background-color 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #3730a3;
+      }
+
+      @media (min-width: 768px) {
+        h1 {
+          font-size: 3vw;
+        }
+
+        .btn {
+          font-size: 1.5vw;
+          padding: 2vh 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+	  <h1>A3 Media - Web Designer Teste Técnico</h1>
+      <h1>{nome}</h1>
+    </header>
+
+    <div class="btn-group">
+      <a class="btn" href="https://github.com/Luccas-Silva" target="_blank">GitHub</a>
+      <a class="btn" href="/paginatemplate1/1">Página Template 1</a>
+      <a class="btn" href="/paginatemplate2/1">Página Template 2</a>
+    </div>
+  </body>
 </html>

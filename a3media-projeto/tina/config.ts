@@ -8,8 +8,8 @@ const branch =
 
 export default defineConfig({
   branch,
-  clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID, // Remova se não estiver usando o modo remoto
-  token: process.env.TINA_TOKEN, // Remova se não estiver usando o modo remoto
+  clientId: null,
+  token: null, 
   build: {
     outputFolder: "admin",
     publicFolder: "public",
@@ -26,9 +26,9 @@ export default defineConfig({
         name: "paginatemplate1",
         label: "Página Template 1",
         path: "src/pages/paginatemplate1",
-        format: "mdx", // Ou "astro" se não quiser usar MDX
+        format: "mdx", 
         match: {
-          include: "[id].mdx", // Ou "[id].astro"
+          include: "[id].mdx",
         },
         fields: [
           {
@@ -47,16 +47,15 @@ export default defineConfig({
             name: "body",
             label: "Conteúdo",
           },
-          // Adicione outros campos que você queira gerenciar
         ],
       },
       {
         name: "paginatemplate2",
         label: "Página Template 2",
         path: "src/pages/paginatemplate2",
-        format: "mdx", // Ou "astro"
+        format: "mdx", 
         match: {
-          include: "[id].mdx", // Ou "[id].astro"
+          include: "[id].mdx", 
         },
         fields: [
           {
@@ -75,7 +74,6 @@ export default defineConfig({
             name: "body",
             label: "Conteúdo",
           },
-          // Adicione outros campos
         ],
       },
     ],

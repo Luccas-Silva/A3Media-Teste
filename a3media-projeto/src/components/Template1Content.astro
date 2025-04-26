@@ -2,23 +2,117 @@
 const { pageNumber } = Astro.props;
 ---
 
-<div>
-  <h1>Conteúdo da Página Template 1 - Número: {pageNumber}</h1>
-  {/* Cole aqui o HTML copiado da página https://getflowempower.com/ps/pscollins01 */}
-  <div class="hero">
-    {/* ... elementos do hero ... */}
-  </div>
-  <div class="main-content">
-    {/* ... restante do conteúdo ... */}
-  </div>
-</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prostate Comfort Trick - Página {pageNumber}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-<style>
-  /* Cole aqui o CSS da página https://getflowempower.com/ps/pscollins01 */
-  .hero {
-    /* ... estilos do hero ... */
-  }
-  .main-content {
-    /* ... estilos do conteúdo principal ... */
-  }
-</style>
+    .container {
+      padding: 2rem;
+    }
+
+    .advertisement {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: gray;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-thumbnail {
+      max-width: 100%;
+      height: auto;
+      margin: 1rem 0;
+    }
+
+    .btn {
+      background-color: #28a745;
+      color: white;
+      padding: 1rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      display: inline-block;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.8;
+      margin: 1rem 0;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    footer {
+      font-size: 0.8rem;
+      color: gray;
+      margin-top: 3rem;
+      padding: 2rem;
+      border-top: 1px solid #ccc;
+    }
+
+    .footer-links {
+      margin-top: 1.5rem;
+    }
+
+    .footer-links a {
+      color: inherit;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="advertisement">Advertisement</div>
+
+    <h1>Try This Easy Evening Trick for Prostate Comfort</h1>
+
+    <div><img src="/natural_recipe_assets/images/presellimage.gif" alt="Prostate Trick Video" class="video-thumbnail" /></div>
+    
+
+    <a href="#" class="btn">Click Here to Watch The Video</a>
+
+    <p>If you’re over 45, you might have noticed some changes in how you feel as you age. For many men, the prostate naturally grows over time—starting about the size of a walnut in your 20s and potentially increasing as the years go by.</p>
+
+    <p>This can sometimes lead to discomfort, like that frequent “need to go” feeling or occasional tiredness, which might affect your daily life.</p>
+
+    <p>Here’s the good news! Experts have explored a simple, 21-second evening routine inspired by Japanese traditions that may help support prostate comfort and overall wellness.</p>
+
+    <p>Even better? It’s something you can try at home using common, natural ingredients you might already have on hand.</p>
+
+    <p>If you or someone you know is curious about gentle ways to care for prostate health, click below to watch a short, free video featuring Dr. Collins, who shares insights on this easy approach.</p>
+
+    <a href="#" class="btn">Click Here to Watch The Video</a>
+
+    <footer>
+      <p>Copyright 2025 by getflowempower.com. All rights reserved.</p>
+
+      <p>This site is not a part of the Youtube website or Youtube Inc. Additionally, This site is NOT endorsed by Youtube in any way. YOUTUBE is a trademark of YOUTUBE, Inc.</p>
+
+      <p>FDA Compliance<br>The information on this website has not been evaluated by the Food & Drug Administration or any other medical body...</p>
+
+      <div class="footer-links">
+        <a href="#">Shipping</a> |
+        <a href="#">Contact</a> |
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms Of Service</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
