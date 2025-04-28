@@ -1,26 +1,32 @@
 ---
-import Template1Content from '../../components/Template1Content.astro';
+import { getEntryBySlug } from 'astro:content';
+import { faker } from '@faker-js/faker';
 
-export const getStaticPaths = async () => {
-  return Array.from({ length: 1000 }, (_, i) => ({
-    params: { id: (i + 1).toString() },
-    props: { pageNumber: i + 1 },
-  }));
-};
+const { id } = Astro.params;
+const slug = `pagina-${id}`;
 
-const { pageNumber } = Astro.props;
+const page = await getEntryBySlug('template1', slug);
+
+if (!page) {
+  throw new Error(`Página "${slug}" não encontrada.`);
+}
+
+const title = page.data.title || faker.lorem.sentence();
+const body = page.data.body || faker.lorem.paragraphs(3, '\n\n');
+const image = page.data.image || `https://placehold.co/600x400?text=${encodeURIComponent(faker.lorem.word())}`;
 ---
 
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Template 1 - {pageNumber}</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
 </head>
 <body>
   <main>
-    <Template1Content pageNumber={pageNumber} />
+    <h1>{title}</h1>
+    <img src={image} alt={title} />
+    <section innerHTML={body} />
   </main>
 </body>
 </html>

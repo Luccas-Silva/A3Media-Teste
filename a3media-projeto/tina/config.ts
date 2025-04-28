@@ -1,4 +1,4 @@
-import { defineConfig } from "tinacms";
+import { defineConfig } from 'tinacms';
 
 const branch =
   process.env.GITHUB_BRANCH ||
@@ -23,56 +23,54 @@ export default defineConfig({
   schema: {
     collections: [
       {
-        name: "paginatemplate1",
-        label: "Página Template 1",
-        path: "src/pages/paginatemplate1",
-        format: "mdx", 
-        match: {
-          include: "[id].mdx",
-        },
+        name: 'template1',
+        label: 'Página Template 1',
+        path: 'src/content/template1', 
+        format: 'mdx',
         fields: [
           {
-            type: "string",
-            name: "title",
-            label: "Título",
-            isTitle: true,
+            type: 'string',
+            name: 'title',
+            label: 'Título',
+            required: true,
           },
           {
-            type: "number",
-            name: "pageNumber",
-            label: "Número da Página",
+            type: 'rich-text',
+            name: 'body',
+            label: 'Conteúdo Principal',
+            required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Conteúdo",
+            type: 'image',
+            name: 'image',
+            label: 'Imagem',
+            required: false,
           },
         ],
       },
       {
-        name: "paginatemplate2",
-        label: "Página Template 2",
-        path: "src/pages/paginatemplate2",
-        format: "mdx", 
-        match: {
-          include: "[id].mdx", 
-        },
+        name: 'template2',
+        label: 'Página Template 2',
+        path: 'src/content/template2', 
+        format: 'mdx',
         fields: [
           {
-            type: "string",
-            name: "title",
-            label: "Título",
-            isTitle: true,
+            type: 'string',
+            name: 'title',
+            label: 'Título',
+            required: true,
           },
           {
-            type: "number",
-            name: "pageNumber",
-            label: "Número da Página",
+            type: 'rich-text',
+            name: 'body',
+            label: 'Conteúdo Principal',
+            required: true,
           },
           {
-            type: "rich-text",
-            name: "body",
-            label: "Conteúdo",
+            type: 'image',
+            name: 'image',
+            label: 'Imagem',
+            required: false,
           },
         ],
       },
